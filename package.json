@@ -1,0 +1,47 @@
+{
+  "name": "dbm",
+  "version": "1.0.0",
+  "description": "Node.js dependency bundle manager",
+  "bin": {
+    "dbm-cli": "bin/dbm-cli.js"
+  },
+  "scripts": {
+    "install": "scripts/install.js",
+    "uninstall": "scripts/uninstall.js",
+    "cover": "nyc --reporter=lcov npm test && nyc report",
+    "coverage": "npm run cover",
+    "lint": "eslint lib bin/*js test",
+    "pretest": "npm run lint",
+    "test": "mocha test --recursive --reporter=spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sumeetkakkar/dbm.git"
+  },
+  "keywords": [
+    "Node.js",
+    "dependency",
+    "bundle",
+    "manager",
+    "packages"
+  ],
+  "author": "sumeetkakkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumeetkakkar/dbm/issues"
+  },
+  "homepage": "https://github.com/sumeetkakkar/dbm#readme",
+  "dependencies": {
+    "commander": "^7.2.0",
+    "find-up": "^5.0.0",
+    "ini": "^2.0.0",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^11.1.2",
+    "tar": "^6.1.0"
+  }
+}
